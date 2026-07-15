@@ -1,6 +1,4 @@
-/* =====================================================
-   MTM6201 Midterm - Main Stylesheet
-===================================================== */
+/* MTM6201 Midterm */
 
 :root {
   --color-white: #ffffff;
@@ -15,9 +13,7 @@
   --max-width: 1200px;
 }
 
-/* -----------------------------------
-   Global Styles
------------------------------------ */
+/* Global Styles */
 
 body {
   font-family: var(--font-body);
@@ -30,9 +26,7 @@ body {
   margin-inline: auto;
 }
 
-/* -----------------------------------
-   Typography
------------------------------------ */
+/* Typography*/
 
 h1,
 h2,
@@ -86,9 +80,7 @@ p {
   color: var(--color-white);
 }
 
-/* -----------------------------------
-   Skip Link
------------------------------------ */
+/* Skip Link*/
 
 .skip-link {
   position: absolute;
@@ -105,9 +97,7 @@ p {
   top: 0;
 }
 
-/* -----------------------------------
-   Buttons
------------------------------------ */
+/* Buttons */
 
 .btn {
   display: inline-block;
@@ -166,9 +156,7 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* -----------------------------------
-   Header
------------------------------------ */
+/*Header*/
 
 .site-header {
   position: absolute;
@@ -208,9 +196,7 @@ button:focus-visible {
   color: var(--color-gold);
 }
 
-/* -----------------------------------
-   Hero
------------------------------------ */
+/* Hero  */
 
 .hero {
   position: relative;
@@ -268,9 +254,7 @@ button:focus-visible {
   }
 }
 
-/* -----------------------------------
-   Coffee Gallery
------------------------------------ */
+/* Coffee Gallery */
 
 .gallery {
   padding: 4rem 0;
@@ -294,9 +278,7 @@ button:focus-visible {
   height: 280px;
 }
 
-/* -----------------------------------
-   Why Visit Us
------------------------------------ */
+/* Visit Us */
 
 .why-visit {
   padding: 4rem 0;
@@ -334,9 +316,7 @@ button:focus-visible {
   margin-inline: auto;
 }
 
-/* -----------------------------------
-   Explore Section
------------------------------------ */
+/* Explore Section */
 
 .explore {
   display: flex;
@@ -384,9 +364,7 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
-/* -----------------------------------
-   Our Story
------------------------------------ */
+/* ----- Our Story------ */
 
 .our-story {
   padding: 4rem 0;
@@ -413,9 +391,7 @@ button:focus-visible {
   margin-bottom: 1.5rem;
 }
 
-/* -----------------------------------
-   Testimonials
------------------------------------ */
+/* --------------Testimonials------------------ */
 
 .testimonials {
   padding: 4rem 0;
@@ -481,9 +457,7 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
-/* -----------------------------------
-   Footer
------------------------------------ */
+/* ----------Footer----------------- */
 
 .site-footer {
   padding: 1.5rem;
@@ -494,9 +468,7 @@ button:focus-visible {
   font-size: 0.85rem;
 }
 
-/* -----------------------------------
-   Tablet
------------------------------------ */
+/* ------------------Tablet-------------------- */
 
 @media (min-width: 768px) {
   h1 {
@@ -569,9 +541,7 @@ button:focus-visible {
   }
 }
 
-/* -----------------------------------
-   Desktop
------------------------------------ */
+/* ------Desktop--------- */
 
 @media (min-width: 1200px) {
   h1 {
