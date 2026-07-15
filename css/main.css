@@ -1,0 +1,624 @@
+/* =====================================================
+   MTM6201 Midterm - Main Stylesheet
+===================================================== */
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gold: #d69e3d;
+  --color-gold-dark: #966f2c;
+  --color-cream: #f3f0e9;
+
+  --font-heading: "Lato", sans-serif;
+  --font-body: "Karla", sans-serif;
+
+  --max-width: 1200px;
+}
+
+/* -----------------------------------
+   Global Styles
+----------------------------------- */
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-black);
+}
+
+.wrapper {
+  width: min(100% - 2.5rem, var(--max-width));
+  margin-inline: auto;
+}
+
+/* -----------------------------------
+   Typography
+----------------------------------- */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.3;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.eyebrow {
+  color: var(--color-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow-center {
+  text-align: center;
+}
+
+.section-heading {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-heading.center {
+  text-align: center;
+}
+
+.section-heading.light {
+  color: var(--color-white);
+}
+
+/* -----------------------------------
+   Skip Link
+----------------------------------- */
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 0.75rem 1.25rem;
+  z-index: 999;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* -----------------------------------
+   Buttons
+----------------------------------- */
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.btn-white:hover,
+.btn-white:focus-visible {
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+
+.btn-black {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn-black:hover,
+.btn-black:focus-visible {
+  background: var(--color-gold);
+}
+
+.btn-outline-white {
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  background: transparent;
+}
+
+.btn-outline-white:hover,
+.btn-outline-white:focus-visible {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* -----------------------------------
+   Header
+----------------------------------- */
+
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 10;
+  padding: 1.25rem 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 34px;
+  width: auto;
+}
+
+.main-nav > ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  font-family: var(--font-heading);
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: color 0.25s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--color-gold);
+}
+
+/* -----------------------------------
+   Hero
+----------------------------------- */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--color-white);
+  max-width: 700px;
+  padding: 7rem 1rem 3rem;
+  animation: fadeUp .8s ease both;
+}
+.hero-content h1 {
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.hero-text {
+  max-width: 600px;
+  margin: 0 auto 1.75rem;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -----------------------------------
+   Coffee Gallery
+----------------------------------- */
+
+.gallery {
+  padding: 4rem 0;
+  background-color: var(--color-cream);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.gallery-grid .gallery-main {
+  height: 280px;
+}
+
+/* -----------------------------------
+   Why Visit Us
+----------------------------------- */
+
+.why-visit {
+  padding: 4rem 0;
+  background-color: var(--color-cream);
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.feature-list > li {
+  padding-inline: 0.5rem;
+}
+
+.feature-list > li:nth-child(2) {
+  padding-inline: 1rem;
+}
+
+.feature-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 1rem;
+}
+
+.feature-list h3 {
+  margin-bottom: 0.75rem;
+}
+
+.feature-list p {
+  max-width: 320px;
+  margin-inline: auto;
+}
+
+/* -----------------------------------
+   Explore Section
+----------------------------------- */
+
+.explore {
+  display: flex;
+  flex-direction: column;
+}
+
+.explore-card {
+  position: relative;
+  isolation: isolate;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.explore-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.explore-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.explore-content {
+  position: relative;
+  z-index: 2;
+  max-width: 420px;
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.explore-content h2 {
+  margin-bottom: 1.5rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+/* -----------------------------------
+   Our Story
+----------------------------------- */
+
+.our-story {
+  padding: 4rem 0;
+  background-color: var(--color-cream);
+}
+
+.story-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.story-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.story-text {
+  max-width: 520px;
+}
+
+.story-text p:not(.eyebrow) {
+  margin-bottom: 1.5rem;
+}
+
+/* -----------------------------------
+   Testimonials
+----------------------------------- */
+
+.testimonials {
+  padding: 4rem 0;
+  background-color: var(--color-black);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.testimonial {
+  position: relative;
+  isolation: isolate;
+  min-height: 340px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.testimonial img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.testimonial-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.2) 65%
+    );
+  z-index: 1;
+}
+
+.testimonial-text {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+  color: var(--color-white);
+}
+
+.testimonials .testimonial + .testimonial {
+  margin-top: 0;
+}
+
+.testimonial-text p {
+  margin-bottom: 0.75rem;
+}
+
+.testimonial-text .testimonial-name {
+  margin-bottom: 0;
+  color: var(--color-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* -----------------------------------
+   Footer
+----------------------------------- */
+
+.site-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* -----------------------------------
+   Tablet
+----------------------------------- */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.375rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  .main-nav > ul {
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .hero {
+    min-height: 720px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 210px;
+  }
+
+  .gallery-grid img {
+    height: 100%;
+  }
+
+  .gallery-grid .gallery-main {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    height: 100%;
+  }
+
+  .feature-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .explore {
+    flex-direction: row;
+  }
+
+  .explore-card {
+    width: 50%;
+    min-height: 480px;
+  }
+
+  .story-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .story-img,
+  .story-text {
+    width: 50%;
+  }
+
+  .story-img {
+    height: 420px;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* -----------------------------------
+   Desktop
+----------------------------------- */
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3.875rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .site-header {
+    padding: 1.75rem 0;
+  }
+
+  .hero {
+    min-height: 760px;
+  }
+
+  .gallery {
+    padding: 6rem 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 220px);
+  }
+
+  .gallery-grid .gallery-main {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .why-visit,
+  .our-story,
+  .testimonials {
+    padding: 6rem 0;
+  }
+
+  .explore-card {
+    min-height: 520px;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
